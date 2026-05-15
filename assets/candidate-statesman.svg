@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Statesman campaign image placeholder</title>
+  <desc id="desc">Abstract presidential candidate portrait placeholder in a calm civic interior.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#08233a"/>
+      <stop offset="0.56" stop-color="#173f50"/>
+      <stop offset="1" stop-color="#f4eadc"/>
+    </linearGradient>
+    <linearGradient id="light" x1="0" x2="1">
+      <stop offset="0" stop-color="#f8f2e8" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#d99a3d" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1100" fill="url(#bg)"/>
+  <rect x="0" y="0" width="760" height="1100" fill="#041727" opacity="0.34"/>
+  <path d="M908 0h692v1100H980c178-185 224-389 164-613C1101 327 1016 166 908 0Z" fill="url(#light)" opacity="0.72"/>
+  <g opacity="0.16" stroke="#f8f2e8" stroke-width="2">
+    <path d="M1110 126h300M1070 194h360M1030 262h420M1002 330h450"/>
+    <path d="M1258 126v470M1364 126v470"/>
+  </g>
+  <ellipse cx="1140" cy="1015" rx="410" ry="94" fill="#041727" opacity="0.24" filter="url(#soft)"/>
+  <g transform="translate(940 210)">
+    <path d="M229 330c-118 0-214 92-222 218l-25 342h510l-27-342c-9-126-104-218-236-218Z" fill="#08233a"/>
+    <path d="M126 490c62 54 144 75 234 8 73 73 108 187 118 392H-18c13-190 55-323 144-400Z" fill="#0d4353"/>
+    <circle cx="232" cy="184" r="138" fill="#d4a67a"/>
+    <path d="M91 171c14-103 89-159 164-159 99 0 155 63 163 144-55-20-101-23-150-9-61 17-113 25-177 24Z" fill="#172536"/>
+    <path d="M122 287c51 64 158 80 221 0-14 86-56 133-111 133-56 0-96-47-110-133Z" fill="#c58f67"/>
+    <path d="M110 502l112 388h-240c7-165 43-293 128-388Z" fill="#09243b"/>
+    <path d="M350 498l128 392H224l116-392Z" fill="#09243b"/>
+    <path d="M190 462h86l-28 72h-36l-22-72Z" fill="#f7f1e7"/>
+  </g>
+  <g opacity="0.2" fill="#f7f1e7">
+    <rect x="114" y="662" width="490" height="14"/>
+    <rect x="114" y="718" width="360" height="14"/>
+    <rect x="114" y="774" width="430" height="14"/>
+  </g>
+</svg>

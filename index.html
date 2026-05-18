@@ -19,13 +19,16 @@
     <meta property="og:url" content="https://example.com/">
     <meta property="og:image" content="assets/og-preview.svg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#09243b">
+    <meta name="theme-color" content="#0b3a63">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <script>document.documentElement.classList.add("js");</script>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body class="theme-statesman">
     <a class="skip-link" href="#main">Към съдържанието</a>
+    <div class="scroll-progress" aria-hidden="true">
+      <span data-scroll-progress></span>
+    </div>
 
     <header class="site-header" aria-label="Основна навигация">
       <a class="brand" href="#top" aria-label="Начало">
@@ -35,16 +38,21 @@
       <nav class="top-nav" aria-label="Раздели">
         <a href="#candidate">Кандидатът</a>
         <a href="#directions">Посоки</a>
+        <a href="#events">Събития</a>
         <a href="#join">Включи се</a>
         <a href="#media">Медии</a>
       </nav>
-      <a class="header-cta" href="movement.html">Movement версия</a>
+      <nav class="version-switcher" aria-label="Визуални версии">
+        <a href="index.html" aria-current="page">Държавност</a>
+        <a href="movement.html">Участие</a>
+        <a href="people.html">Хората</a>
+      </nav>
     </header>
 
     <main id="main">
       <section id="top" class="hero" aria-labelledby="hero-title">
         <picture class="hero-media">
-          <img src="assets/candidate-statesman.svg" alt="Спокоен портрет на кандидат в обществена среда">
+          <img src="assets/candidate-statesman-ai.png" alt="AI placeholder портрет на потенциален кандидат в държавническа среда">
         </picture>
         <div class="hero-overlay"></div>
         <div class="hero-copy reveal">
@@ -92,8 +100,9 @@
 
       <section id="candidate" class="section split-section" aria-labelledby="candidate-title">
         <div class="section-inner split-grid">
-          <div class="portrait-panel reveal">
-            <img src="assets/candidate-statesman.svg" alt="Портрет placeholder на кандидата">
+          <div class="portrait-panel portrait-panel-statesman reveal">
+            <img src="assets/candidate-statesman-ai.png" alt="AI placeholder портрет на потенциален кандидат">
+            <p class="asset-note">AI placeholder image. Final photos pending candidate approval.</p>
           </div>
           <div class="narrative reveal">
             <p class="eyebrow">Кой е кандидатът?</p>
@@ -116,7 +125,11 @@
         <div class="section-inner">
           <div class="section-heading reveal">
             <p class="eyebrow">Какво чуваме от хората?</p>
-            <h2 id="listening-title">Преди политиките идва разговорът.</h2>
+            <h2 id="listening-title">Време е да се чуем.</h2>
+            <p class="section-kicker">
+              Това е работна campaign линия за първа вътрешна проба: по-кратка,
+              по-човешка и по-лесна за повторение.
+            </p>
           </div>
           <div class="quote-grid">
             <blockquote class="reveal">Искаме нормалност.</blockquote>
@@ -124,6 +137,10 @@
             <blockquote class="reveal">Искаме държава, която не ни унижава.</blockquote>
             <blockquote class="reveal">Искаме политиците да спрат да ни делят.</blockquote>
             <blockquote class="reveal">Искаме България да има самочувствие.</blockquote>
+          </div>
+          <div class="people-texture reveal">
+            <img src="assets/people-listening-ai.png" alt="AI placeholder кадър с граждани в разговор">
+            <p>AI placeholder: човешка текстура за вътрешен прототип, не реално събитие.</p>
           </div>
         </div>
       </section>
@@ -169,13 +186,14 @@
               Тази форма е само за демонстрация. Данни не се изпращат, не се записват
               и не се използват за реална кампания.
             </p>
-            <div class="donation-note" id="support">
-              <h3>Подкрепи с дарение</h3>
-              <p>Даренията ще бъдат активирани след юридическо потвърждение.</p>
-              <button class="button button-secondary" type="button" data-donate-trigger>
-                Виж статуса
-              </button>
-            </div>
+            <form class="newsletter-form" novalidate data-newsletter-form>
+              <label>
+                <span>Получавай новини</span>
+                <input name="newsletterEmail" type="email" autocomplete="email" placeholder="email@example.com" required>
+              </label>
+              <button class="button button-primary" type="submit">Запиши ме</button>
+              <div class="form-alert" role="status" aria-live="polite" data-form-alert></div>
+            </form>
           </div>
 
           <form class="volunteer-form reveal" novalidate data-volunteer-form>
@@ -217,21 +235,83 @@
               Изпрати тестово
             </button>
           </form>
+          <div class="donation-note donation-note-side reveal" id="support">
+            <div>
+              <h3>Подкрепи с дарение</h3>
+              <p>Даренията ще бъдат активирани след юридическо потвърждение.</p>
+            </div>
+            <button class="button button-secondary" type="button" data-donate-trigger>
+              Виж статуса
+            </button>
+          </div>
         </div>
       </section>
 
-      <section class="section events-section" aria-labelledby="events-title">
+      <section id="events" class="section events-section" aria-labelledby="events-title">
         <div class="section-inner">
           <div class="section-heading reveal">
-            <p class="eyebrow">Следващи срещи</p>
-            <h2 id="events-title">Първите градове са подготвени като placeholder.</h2>
+            <p class="eyebrow">Демо програма</p>
+            <h2 id="events-title">Къде е кандидатът тази седмица</h2>
+            <p class="section-kicker">
+              Примерни вътрешни записи за усещане за движение. Не са реални събития.
+            </p>
           </div>
-          <div class="events-list">
-            <article class="event reveal"><span>София</span><strong>Предстои</strong></article>
-            <article class="event reveal"><span>Пловдив</span><strong>Предстои</strong></article>
-            <article class="event reveal"><span>Варна</span><strong>Предстои</strong></article>
-            <article class="event reveal"><span>Благоевград</span><strong>Предстои</strong></article>
-            <article class="event reveal"><span>Чужбина / online</span><strong>Предстои</strong></article>
+          <div class="events-list" aria-label="Демо timeline с примерни събития">
+            <article class="event reveal">
+              <div class="event-card">
+                <small>25.05 (Понеделник)</small>
+                <span>София</span>
+                <p>Разговор с млади професионалисти</p>
+                <strong>Демо</strong>
+              </div>
+              <div class="event-marker" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 21s7-5.4 7-12a7 7 0 1 0-14 0c0 6.6 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg>
+              </div>
+            </article>
+            <article class="event reveal">
+              <div class="event-card">
+                <small>26.05 (Вторник)</small>
+                <span>Пловдив</span>
+                <p>Среща с доброволци и общности</p>
+                <strong>Демо</strong>
+              </div>
+              <div class="event-marker" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 21s7-5.4 7-12a7 7 0 1 0-14 0c0 6.6 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg>
+              </div>
+            </article>
+            <article class="event reveal">
+              <div class="event-card">
+                <small>27.05 (Сряда)</small>
+                <span>Варна</span>
+                <p>Listening tour край морето</p>
+                <strong>Демо</strong>
+              </div>
+              <div class="event-marker" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 21s7-5.4 7-12a7 7 0 1 0-14 0c0 6.6 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg>
+              </div>
+            </article>
+            <article class="event reveal">
+              <div class="event-card">
+                <small>28.05 (Четвъртък)</small>
+                <span>Благоевград</span>
+                <p>Разговор за младите и регионите</p>
+                <strong>Демо</strong>
+              </div>
+              <div class="event-marker" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 21s7-5.4 7-12a7 7 0 1 0-14 0c0 6.6 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg>
+              </div>
+            </article>
+            <article class="event reveal event-online">
+              <div class="event-card">
+                <small>31.05 (Неделя)</small>
+                <span>Online</span>
+                <p>Среща с българи в чужбина</p>
+                <strong>Демо</strong>
+              </div>
+              <div class="event-marker" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z"/><path d="M10 18h4"/></svg>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -263,7 +343,7 @@
     <footer class="site-footer" id="legal">
       <div>
         <strong>Кандидат 2026</strong>
-        <p>Пробна страница. Текстове, снимки, правни формулировки и дарения подлежат на потвърждение.</p>
+        <p>Пробна страница. Текстове, AI изображения, правни формулировки и дарения подлежат на потвърждение.</p>
       </div>
       <nav aria-label="Footer">
         <a href="#legal">Privacy Policy placeholder</a>
